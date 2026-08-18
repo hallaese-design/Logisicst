@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Lukop Nigeria Limited logistics services, shipment tracking, freight forwarding, cargo transportation and customer support.">
+
+    <title>Lukop Nigeria Limited | Services & Tracking</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --blue:#063B8C;
+            --dark:#031F4F;
+            --gold:#D9A441;
+            --light-gold:#F3D48A;
+            --white:#fff;
+            --light:#F5F8FC;
+            --text:#25334A;
+            --muted:#68758A;
+            --border:#E4EAF2;
+        }
+
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html {
+            scroll-behavior:smooth;
+        }
+
+        body {
+            font-family:'Inter',sans-serif;
+            color:var(--text);
+            line-height:1.7;
+            background:#fff;
+        }
+
+        h1,h2,h3,h4 {
+            font-family:'Montserrat',sans-serif;
+        }
+
+        a {
+            text-decoration:none;
+            color:inherit;
+        }
+
+        .container {
+            width:min(1180px,92%);
+            margin:auto;
+        }
+
+        /* HEADER */
+
+        .topbar {
+            background:var(--dark);
+            color:white;
+            padding:9px 0;
+            font-size:13px;
+        }
+
+        .topbar-inner {
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .topbar span {
+            margin-right:20px;
+        }
+
+        header {
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:white;
+            box-shadow:0 4px 20px rgba(0,0,0,.08);
+        }
+
+        nav {
+            height:78px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo {
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+        .logo-mark {
+            width:48px;
+            height:48px;
+            background:linear-gradient(135deg,var(--blue),var(--gold));
+            color:white;
+            display:grid;
+            place-items:center;
+            border-radius:10px;
+            font-weight:900;
+            font-size:20px;
+        }
+
+        .logo-text strong {
+            display:block;
+            color:var(--blue);
+            font-family:'Montserrat';
+            font-size:18px;
+        }
+
+        .logo-text small {
+            color:var(--gold);
+            font-size:9px;
+            font-weight:800;
+            letter-spacing:1.5px;
+        }
+
+        .nav-links {
+            display:flex;
+            list-style:none;
+            gap:27px;
+            align-items:center;
+        }
+
+        .nav-links a {
+            font-size:14px;
+            font-weight:600;
+        }
+
+        .nav-links a:hover {
+            color:var(--gold);
+        }
+
+        .nav-btn {
+            background:var(--blue);
+            color:white !important;
+            padding:12px 20px;
+            border-radius:7px;
+        }
+
+        .menu-btn {
+            display:none;
+            color:var(--blue);
+            font-size:28px;
+        }
+
+        /* PAGE HERO */
+
+        .page-hero {
+            padding:120px 0;
+            background:
+                linear-gradient(90deg,rgba(3,31,79,.95),rgba(3,31,79,.7)),
+                url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=2000&q=85')
+                center/cover;
+            color:white;
+        }
+
+        .page-hero h1 {
+            font-size:clamp(40px,6vw,64px);
+            line-height:1.05;
+            margin-bottom:20px;
+        }
+
+        .page-hero h1 span {
+            color:var(--light-gold);
+        }
+
+        .page-hero p {
+            max-width:650px;
+            color:#E2EAF6;
+            font-size:18px;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding:90px 0;
+        }
+
+        .section-title {
+            max-width:700px;
+            margin-bottom:45px;
+        }
+
+        .section-title.center {
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+        }
+
+        .eyebrow {
+            color:var(--gold);
+            font-size:13px;
+            font-weight:800;
+            letter-spacing:2px;
+            text-transform:uppercase;
+            margin-bottom:10px;
+        }
+
+        .section-title h2 {
+            color:var(--dark);
+            font-size:clamp(32px,4vw,45px);
+            line-height:1.15;
+            margin-bottom:15px;
+        }
+
+        .section-title p {
+            color:var(--muted);
+        }
+
+        /* SERVICES */
+
+        .services {
+            background:var(--light);
+        }
+
+        .service-grid {
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:25px;
+        }
+
+        .service-card {
+            background:white;
+            padding:35px;
+            border-radius:12px;
+            border:1px solid var(--border);
+            transition:.3s;
+        }
+
+        .service-card:hover {
+            transform:translateY(-8px);
+            box-shadow:0 18px 40px rgba(0,0,0,.09);
+            border-color:var(--light-gold);
+        }
+
+        .service-icon {
+            width:55px;
+            height:55px;
+            border-radius:10px;
+            background:#EDF3FC;
+            color:var(--blue);
+            display:grid;
+            place-items:center;
+            font-size:25px;
+            margin-bottom:20px;
+        }
+
+        .service-card h3 {
+            color:var(--blue);
+            font-size:20px;
+            margin-bottom:10px;
+        }
+
+        .service-card p {
+            color:var(--muted);
+            font-size:14px;
+        }
+
+        /* TRACKING */
+
+        .tracking {
+            background:
+                linear-gradient(120deg,var(--blue),var(--dark));
+            color:white;
+        }
+
+        .tracking-grid {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:70px;
+            align-items:center;
+        }
+
+        .tracking h2 {
+            font-size:clamp(32px,4vw,45px);
+            line-height:1.15;
+            margin-bottom:18px;
+        }
+
+        .tracking p {
+            color:#DCE7F7;
+        }
+
+        .tracking-box {
+            background:white;
+            padding:35px;
+            border-radius:14px;
+            box-shadow:0 20px 50px rgba(0,0,0,.2);
+        }
+
+        .tracking-box h3 {
+            color:var(--dark);
+            margin-bottom:10px;
+        }
+
+        .tracking-box p {
+            color:var(--muted);
+            font-size:14px;
+            margin-bottom:20px;
+        }
+
+        .tracking-form {
+            display:flex;
+            gap:10px;
+        }
+
+        .tracking-form input {
+            flex:1;
+            padding:15px;
+            border:1px solid var(--border);
+            border-radius:7px;
+            outline:none;
+            font-family:inherit;
+        }
+
+        .tracking-form button {
+            border:0;
+            padding:15px 20px;
+            border-radius:7px;
+            background:var(--gold);
+            font-weight:800;
+            cursor:pointer;
+        }
+
+        #trackingResult {
+            margin-top:18px;
+            color:var(--blue);
+            font-weight:600;
+            font-size:14px;
+        }
+
+        /* WHY US */
+
+        .why-grid {
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+        }
+
+        .why-card {
+            padding:30px;
+            border:1px solid var(--border);
+            border-radius:10px;
+        }
+
+        .why-card h3 {
+            color:var(--blue);
+            margin-bottom:10px;
+            font-size:18px;
+        }
+
+        .why-card p {
+            color:var(--muted);
+            font-size:14px;
+        }
+
+        /* FAQ */
+
+        .faq-section {
+            background:var(--light);
+        }
+
+        .faq {
+            max-width:850px;
+            margin:auto;
+        }
+
+        details {
+            background:white;
+            margin-bottom:12px;
+            border:1px solid var(--border);
+            border-radius:8px;
+            padding:20px 23px;
+        }
+
+        summary {
+            cursor:pointer;
+            font-weight:700;
+            color:var(--dark);
+        }
+
+        details p {
+            padding-top:15px;
+            color:var(--muted);
+            font-size:14px;
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:30px;
+        }
+
+        .contact-card {
+            background:white;
+            border:1px solid var(--border);
+            border-radius:12px;
+            padding:35px;
+        }
+
+        .contact-card h3 {
+            color:var(--blue);
+            margin-bottom:20px;
+        }
+
+        .contact-item {
+            display:flex;
+            gap:15px;
+            margin-bottom:22px;
+        }
+
+        .contact-icon {
+            min-width:42px;
+            height:42px;
+            border-radius:8px;
+            background:#EDF3FC;
+            color:var(--blue);
+            display:grid;
+            place-items:center;
+        }
+
+        .contact-item strong {
+            display:block;
+            color:var(--dark);
+        }
+
+        .contact-item span {
+            color:var(--muted);
+            font-size:14px;
+        }
+
+        .contact-form {
+            display:grid;
+            gap:15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width:100%;
+            padding:14px;
+            border:1px solid var(--border);
+            border-radius:7px;
+            font-family:inherit;
+            outline:none;
+        }
+
+        .contact-form textarea {
+            height:130px;
+            resize:vertical;
+        }
+
+        .contact-form button {
+            background:var(--blue);
+            color:white;
+            border:0;
+            padding:15px;
+            border-radius:7px;
+            font-weight:800;
+            cursor:pointer;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background:#021633;
+            color:#B9C8DD;
+            padding:60px 0 20px;
+        }
+
+        .footer-grid {
+            display:grid;
+            grid-template-columns:1.5fr 1fr 1fr 1.3fr;
+            gap:40px;
+        }
+
+        footer h3 {
+            color:white;
+            margin-bottom:18px;
+            font-size:17px;
+        }
+
+        footer p,
+        footer li {
+            font-size:14px;
+            margin-bottom:8px;
+        }
+
+        footer ul {
+            list-style:none;
+        }
+
+        footer a:hover {
+            color:var(--light-gold);
+        }
+
+        .footer-bottom {
+            margin-top:40px;
+            padding-top:20px;
+            border-top:1px solid rgba(255,255,255,.1);
+            text-align:center;
+            font-size:13px;
+        }
+
+        @media(max-width:900px) {
+
+            .nav-links {
+                display:none;
+                position:absolute;
+                top:78px;
+                left:0;
+                width:100%;
+                background:white;
+                padding:25px;
+                flex-direction:column;
+                align-items:flex-start;
+            }
+
+            .nav-links.active {
+                display:flex;
+            }
+
+            .menu-btn {
+                display:block;
+            }
+
+            .service-grid {
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .why-grid {
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .tracking-grid,
+            .contact-grid {
+                grid-template-columns:1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+
+            .topbar-inner {
+                flex-direction:column;
+                gap:4px;
+            }
+
+            .service-grid,
+            .why-grid,
+            .footer-grid {
+                grid-template-columns:1fr;
+            }
+
+            .tracking-form {
+                flex-direction:column;
+            }
+
+            section {
+                padding:65px 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <div>
+            <span>✉ lukopnigltd@gmail.com</span>
+            <span>☎ +234 812 018 7450</span>
+        </div>
+
+        <span>Reliable. Secure. Connected.</span>
+    </div>
+</div>
+
+<header>
+    <div class="container">
+
+        <nav>
+
+            <a href="index.html" class="logo">
+                <div class="logo-mark">L</div>
+
+                <div class="logo-text">
+                    <strong>LUKOP</strong>
+                    <small>NIGERIA LIMITED</small>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tracking">Tracking</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-btn">Help Desk</a></li>
+            </ul>
+
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+    <div class="container">
+
+        <div class="eyebrow">Lukop Logistics Solutions</div>
+
+        <h1>
+            Complete Logistics
+            <span>Solutions.</span>
+        </h1>
+
+        <p>
+            From local deliveries to international cargo movement,
+            Lukop Nigeria Limited helps businesses and individuals move
+            goods with confidence.
+        </p>
+
+    </div>
+</section>
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title center">
+            <div class="eyebrow">What We Do</div>
+            <h2>Our Logistics Services</h2>
+            <p>
+                Flexible logistics solutions designed around the needs
+                of modern businesses and individuals.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🚚</div>
+                <h3>Courier & Parcel Delivery</h3>
+                <p>
+                    Efficient transportation of documents, parcels and
+                    packages with dependable delivery coordination.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✈</div>
+                <h3>Air Freight</h3>
+                <p>
+                    Fast and efficient air transportation solutions for
+                    time-sensitive shipments.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚢</div>
+                <h3>Sea Freight</h3>
+                <p>
+                    Cost-effective solutions for larger shipments and
+                    international cargo movement.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📦</div>
+                <h3>Cargo Transportation</h3>
+                <p>
+                    Professional cargo movement solutions for commercial
+                    and business shipments.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Warehousing Support</h3>
+                <p>
+                    Coordinated storage and logistics support for businesses
+                    that require dependable supply chain management.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌍</div>
+                <h3>Global Logistics</h3>
+                <p>
+                    International logistics coordination connecting
+                    businesses to destinations around the world.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="tracking" id="tracking">
+
+    <div class="container">
+
+        <div class="tracking-grid">
+
+            <div>
+                <div class="eyebrow">Shipment Tracking</div>
+
+                <h2>
+                    Know Where Your Shipment Is.
+                </h2>
+
+                <p>
+                    Use the shipment tracking area to quickly check the
+                    status of your delivery. Enter your tracking number
+                    and our team can assist you with shipment information.
+                </p>
+            </div>
+
+            <div class="tracking-box">
+
+                <h3>Track Your Shipment</h3>
+
+                <p>
+                    Enter your tracking or shipment reference number below.
+                </p>
+
+                <div class="tracking-form">
+
+                    <input
+                        type="text"
+                        id="trackingNumber"
+                        placeholder="Enter tracking number"
+                    >
+
+                    <button onclick="trackShipment()">
+                        Track
+                    </button>
+
+                </div>
+
+                <div id="trackingResult"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title center">
+            <div class="eyebrow">Why Lukop</div>
+            <h2>Why Customers Choose Us</h2>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <h3>01 — Trust</h3>
+                <p>
+                    We understand that every shipment represents something
+                    valuable to our customers.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>02 — Integrity</h3>
+                <p>
+                    We believe in transparent communication and responsible
+                    business practices.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>03 — Confidentiality</h3>
+                <p>
+                    We respect the privacy of our customers and their
+                    business information.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>04 — Support</h3>
+                <p>
+                    Our team is committed to providing professional support
+                    before, during and after delivery.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="faq-section" id="faq">
+
+    <div class="container">
+
+        <div class="section-title center">
+            <div class="eyebrow">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+            <p>
+                Answers to some common questions about our logistics services.
+            </p>
+        </div>
+
+        <div class="faq">
+
+            <details>
+                <summary>What services does Lukop Nigeria Limited provide?</summary>
+                <p>
+                    We provide logistics and delivery solutions including
+                    courier and parcel delivery, freight coordination,
+                    cargo transportation, warehousing support and other
+                    supply chain services.
+                </p>
+            </details>
+
+            <details>
+                <summary>How can I track my shipment?</summary>
+                <p>
+                    Enter your shipment or tracking reference number in the
+                    tracking section of this website. For additional support,
+                    contact our Help Desk.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can Lukop handle business shipments?</summary>
+                <p>
+                    Yes. We provide logistics solutions suitable for
+                    businesses, organizations, entrepreneurs and individuals.
+                </p>
+            </details>
+
+            <details>
+                <summary>How do I contact Lukop Nigeria Limited?</summary>
+                <p>
+                    You can contact us by telephone at +234 812 018 7450
+                    or email lukopnigltd@gmail.com.
+                </p>
+            </details>
+
+            <details>
+                <summary>Where is your office located?</summary>
+                <p>
+                    Our official address is 722 Road B Close House 18,
+                    Festac Town, Lagos, Nigeria.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title center">
+            <div class="eyebrow">Help Desk</div>
+            <h2>How Can We Help You?</h2>
+            <p>
+                Contact the Lukop team for shipment enquiries, quotations,
+                delivery support and logistics assistance.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>Official Contact Information</h3>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+                        <strong>Office Address</strong>
+                        <span>
+                            722 Road B Close House 18,<br>
+                            Festac Town, Lagos, Nigeria.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">☎</div>
+
+                    <div>
+                        <strong>Telephone</strong>
+                        <span>+234 812 018 7450</span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+
+                    <div>
+                        <strong>Email</strong>
+                        <span>lukopnigltd@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🕘</div>
+
+                    <div>
+                        <strong>Customer Support</strong>
+                        <span>
+                            Contact our team for assistance with
+                            your logistics requirements.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h3>Send Us A Message</h3>
+
+                <form class="contact-form"
+                      onsubmit="sendMessage(event)">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email Address"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Subject"
+                        required
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="How can we help you?"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+                <p id="formResult"
+                   style="margin-top:15px;color:#063B8C;font-weight:600;">
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="logo">
+
+                    <div class="logo-mark">L</div>
+
+                    <div class="logo-text">
+                        <strong style="color:white;">LUKOP</strong>
+                        <small>NIGERIA LIMITED</small>
+                    </div>
+
+                </div>
+
+                <p style="margin-top:20px;">
+                    Connecting people, businesses and destinations
+                    through dependable logistics solutions.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Navigation</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#tracking">Tracking</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Our Services</h3>
+
+                <ul>
+                    <li>Courier Delivery</li>
+                    <li>Air Freight</li>
+                    <li>Sea Freight</li>
+                    <li>Cargo Transportation</li>
+                    <li>Supply Chain Solutions</li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>
+                    722 Road B Close House 18,
+                    Festac Town, Lagos, Nigeria.
+                </p>
+
+                <p>☎ +234 812 018 7450</p>
+
+                <p>✉ lukopnigltd@gmail.com</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Lukop Nigeria Limited. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+function trackShipment() {
+
+    const number =
+        document.getElementById("trackingNumber").value.trim();
+
+    const result =
+        document.getElementById("trackingResult");
+
+    if (number === "") {
+
+        result.innerHTML =
+            "Please enter your tracking number.";
+
+        return;
+    }
+
+    result.innerHTML =
+        "Tracking reference received. Please contact Lukop Help Desk at +234 812 018 7450 for shipment status.";
+}
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const result =
+        document.getElementById("formResult");
+
+    result.innerHTML =
+        "Thank you, " + name +
+        ". Your message has been prepared. Please contact lukopnigltd@gmail.com to complete your enquiry.";
+
+}
+
+</script>
+
+</body>
+</html>
