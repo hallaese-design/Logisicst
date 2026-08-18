@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lukop Nigeria Limited - Professional logistics, freight forwarding, cargo delivery and supply chain solutions in Nigeria and worldwide.">
+    <title>Lukop Nigeria Limited | Logistics & Supply Chain Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue: #063B8C;
+            --dark-blue: #031F4F;
+            --gold: #D9A441;
+            --light-gold: #F3D48A;
+            --white: #ffffff;
+            --light: #F5F8FC;
+            --text: #25334A;
+            --muted: #68758A;
+            --border: #E4EAF2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background: var(--dark-blue);
+            color: white;
+            padding: 9px 0;
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar span {
+            margin-right: 20px;
+        }
+
+        /* NAVIGATION */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            box-shadow: 0 4px 20px rgba(0,0,0,.07);
+        }
+
+        nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-mark {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--blue), var(--gold));
+            color: white;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+            font-size: 20px;
+            box-shadow: 0 8px 20px rgba(6,59,140,.2);
+        }
+
+        .logo-text strong {
+            display: block;
+            font-family: 'Montserrat';
+            color: var(--blue);
+            font-size: 18px;
+        }
+
+        .logo-text small {
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-size: 9px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-btn {
+            background: var(--blue);
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 7px;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--blue);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(90deg, rgba(3,31,79,.97), rgba(3,31,79,.78), rgba(3,31,79,.3)),
+                url('https://images.unsplash.com/photo-1586528116493-da8d0b3fbd4e?auto=format&fit=crop&w=2000&q=85')
+                center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .eyebrow {
+            color: var(--light-gold);
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--light-gold);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            color: #E6EDF8;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 7px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: .3s;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #111;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(217,164,65,.3);
+        }
+
+        .btn-outline {
+            border-color: white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--blue);
+        }
+
+        /* STATS */
+        .stats {
+            margin-top: -50px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0,0,0,.1);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 28px;
+        }
+
+        .stat {
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat h3 {
+            font-size: 28px;
+            color: var(--blue);
+        }
+
+        .stat p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .section-title.center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .section-title .eyebrow {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(32px, 4vw, 46px);
+            color: var(--dark-blue);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 450px;
+            border-radius: 14px;
+            background:
+                linear-gradient(rgba(6,59,140,.15), rgba(3,31,79,.35)),
+                url('https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1000&q=85')
+                center/cover;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--gold);
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        /* MISSION */
+        .mission {
+            background: var(--light);
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 38px;
+            border-radius: 12px;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,.05);
+        }
+
+        .mission-card h3 {
+            color: var(--blue);
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .mission-card p {
+            color: var(--muted);
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(120deg, var(--blue), var(--dark-blue));
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(30px, 4vw, 45px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #DCE7F7;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #021633;
+            color: #B9C8DD;
+            padding: 65px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+            gap: 45px;
+        }
+
+        footer h3 {
+            color: white;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        footer p,
+        footer li {
+            font-size: 14px;
+            margin-bottom: 9px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer a:hover {
+            color: var(--light-gold);
+        }
+
+        .footer-bottom {
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media(max-width: 850px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 25px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2,1fr);
+                gap: 25px;
+            }
+
+            .stat {
+                border-right: 0;
+            }
+
+            .about-grid,
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width: 550px) {
+            .topbar-inner {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                padding: 20px 10px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <div>
+            <span>✉ lukopnigltd@gmail.com</span>
+            <span>☎ +234 812 018 7450</span>
+        </div>
+        <span>Professional Logistics & Supply Chain Solutions</span>
+    </div>
+</div>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <div class="logo-mark">L</div>
+                <div class="logo-text">
+                    <strong>LUKOP</strong>
+                    <small>NIGERIA LIMITED</small>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#mission">Mission & Vision</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html#tracking">Tracking</a></li>
+                <li><a href="services.html#contact" class="nav-btn">Help Desk</a></li>
+            </ul>
+
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="eyebrow">Moving Business Forward</div>
+
+            <h1>
+                Logistics Without
+                <span>Boundaries.</span>
+            </h1>
+
+            <p>
+                Lukop Nigeria Limited provides dependable logistics, freight,
+                cargo delivery and supply chain solutions designed to keep
+                businesses and people connected.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="services.html#tracking" class="btn btn-gold">Track Your Shipment</a>
+                <a href="services.html#contact" class="btn btn-outline">Talk To Our Team</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat">
+                <h3>24/7</h3>
+                <p>Customer Support</p>
+            </div>
+            <div class="stat">
+                <h3>Global</h3>
+                <p>Logistics Reach</p>
+            </div>
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Commitment</p>
+            </div>
+            <div class="stat">
+                <h3>Fast</h3>
+                <p>Delivery Solutions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+
+            <div class="about-image"></div>
+
+            <div class="about-content">
+                <div class="section-title">
+                    <div class="eyebrow">Who We Are</div>
+                    <h2>Moving What Matters, Wherever It Matters.</h2>
+                </div>
+
+                <p>
+                    Lukop Nigeria Limited is a professional logistics company
+                    focused on providing efficient, secure and dependable
+                    transportation and supply chain solutions.
+                </p>
+
+                <p>
+                    From documents and parcels to commercial cargo and
+                    business shipments, our goal is to make movement easier,
+                    safer and more predictable for our customers.
+                </p>
+
+                <ul class="check-list">
+                    <li>Reliable logistics solutions</li>
+                    <li>Secure cargo handling</li>
+                    <li>Professional customer service</li>
+                    <li>Efficient delivery coordination</li>
+                    <li>Confidentiality and integrity</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="mission" id="mission">
+    <div class="container">
+
+        <div class="section-title center">
+            <div class="eyebrow">Our Direction</div>
+            <h2>Built Around Trust. Driven By Excellence.</h2>
+            <p>
+                Everything we do is guided by our commitment to customers,
+                businesses and partners.
+            </p>
+        </div>
+
+        <div class="mission-grid">
+
+            <div class="mission-card">
+                <h3>Our Mission</h3>
+                <p>
+                    To deliver reliable, efficient and customer-focused
+                    logistics solutions while maintaining the highest
+                    standards of integrity, confidentiality, professionalism
+                    and service excellence.
+                </p>
+            </div>
+
+            <div class="mission-card">
+                <h3>Our Vision</h3>
+                <p>
+                    To become a trusted and globally recognized logistics
+                    partner known for dependable delivery, innovative
+                    solutions and exceptional customer experiences.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <div class="section-title center">
+            <div class="eyebrow">Our Values</div>
+            <h2>The Principles Behind Every Delivery</h2>
+        </div>
+
+        <div class="mission-grid">
+
+            <div class="mission-card">
+                <h3>Integrity</h3>
+                <p>We conduct our business honestly and transparently.</p>
+            </div>
+
+            <div class="mission-card">
+                <h3>Reliability</h3>
+                <p>We work to ensure your shipment is handled responsibly.</p>
+            </div>
+
+            <div class="mission-card">
+                <h3>Confidentiality</h3>
+                <p>Your information and business interests deserve protection.</p>
+            </div>
+
+            <div class="mission-card">
+                <h3>Customer Focus</h3>
+                <p>We place our customers at the center of everything we do.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready To Move Your Business Forward?</h2>
+        <p>
+            Speak with the Lukop Nigeria Limited team about your logistics,
+            delivery or supply chain requirements.
+        </p>
+        <a href="services.html#contact" class="btn btn-gold">Contact Lukop Today</a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <div class="logo">
+                    <div class="logo-mark">L</div>
+                    <div class="logo-text">
+                        <strong style="color:white;">LUKOP</strong>
+                        <small>NIGERIA LIMITED</small>
+                    </div>
+                </div>
+
+                <p style="margin-top:20px;">
+                    Professional logistics and supply chain solutions built
+                    around trust, reliability and service excellence.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#mission">Mission & Vision</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Services</h3>
+                <ul>
+                    <li>Courier & Parcel Delivery</li>
+                    <li>Freight Forwarding</li>
+                    <li>Cargo Transportation</li>
+                    <li>Supply Chain Solutions</li>
+                    <li>Warehousing Support</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>722 Road B Close House 18,<br>Festac Town, Lagos, Nigeria.</p>
+                <p>☎ +234 812 018 7450</p>
+                <p>✉ lukopnigltd@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Lukop Nigeria Limited. All Rights Reserved.
+        </div>
+
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
